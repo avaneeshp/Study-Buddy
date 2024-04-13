@@ -1,0 +1,165 @@
+{
+  "Slide Deck 1: Why Pick an Economics Major?": {
+    "Summary": "This slide deck highlights the benefits of choosing Economics as a major. It emphasizes the analytical and quantitative skills developed, leading to high-paying jobs in various sectors like banking, government, consulting, and financial firms. The major also prepares students for advanced degrees like MBAs and JDs. The department offers both a B.A. in Economics and a minor, with specific course requirements outlined.",
+    "Quiz": {
+      "Question 1": {
+        "text": "What are some of the reasons to study Economics?",
+        "options": [
+          "To pursue an advanced degree like an MBA or JD",
+          "To secure a high-paying job",
+          "To understand financial markets and the global economy",
+          "All of the above"
+        ],
+        "answer": "All of the above"
+      },
+      "Question 2": {
+        "text": "What skills does an Economics major emphasize?",
+        "options": [
+          "Creative writing and communication",
+          "Analytical and quantitative skills",
+          "Foreign language proficiency",
+          "Artistic expression"
+        ],
+        "answer": "Analytical and quantitative skills"
+      },
+      "Question 3": {
+        "text": "In what sectors do Economics graduates typically find jobs?",
+        "options": [
+          "Education and healthcare",
+          "Retail and hospitality",
+          "Banking, government, consulting, and financial firms",
+          "Non-profit organizations"
+        ],
+        "answer": "Banking, government, consulting, and financial firms"
+      },
+      "Question 4": {
+        "text": "How many required Economics courses are needed for a B.A. in Economics?",
+        "options": [
+          "5",
+          "10",
+          "15",
+          "20"
+        ],
+        "answer": "10"
+      },
+      "Question 5": {
+        "text": "What is the credit requirement for elective Economics courses in the B.A. program?",
+        "options": [
+          "6 credits",
+          "12 credits",
+          "15 credits",
+          "30 credits"
+        ],
+        "answer": "15 credits"
+      }
+    }
+  },
+  "Slide Deck 2: B.A. Degree in Economics": {
+    "Summary": "This slide deck details the course requirements for the B.A. in Economics program. It lists the 10 required courses, covering topics like macroeconomics, microeconomics, econometrics, international economics, and business forecasting. Additionally, it presents a range of elective courses students can choose from, including real estate, social problems, financial economics, money and banking, public finance, and labor economics.",
+    "Quiz": {
+      "Question 1": {
+        "text": "Which course introduces students to the fundamentals of macroeconomics?",
+        "options": [
+          "ECON 101 Applied Macroeconomics",
+          "ECON 102 Applied Microeconomics",
+          "ECON 203 Fundamental Maths for Economics",
+          "ECON 370 International Economics"
+        ],
+        "answer": "ECON 101 Applied Macroeconomics"
+      },
+      "Question 2": {
+        "text": "What is the course code for Quantitative Methods for Economics?",
+        "options": [
+          "ECON 206",
+          "ECON 317",
+          "ECON 390",
+          "ECON 412"
+        ],
+        "answer": "ECON 317"
+      },
+      "Question 3": {
+        "text": "Students can choose between Managerial Economics and which other course?",
+        "options": [
+          "Intermediate Macroeconomics",
+          "Intermediate Microeconomics",
+          "Public Finance",
+          "Development of Economic Thought"
+        ],
+        "answer": "Intermediate Microeconomics"
+      },
+      "Question 4": {
+        "text": "Which elective course focuses on the economic aspects of urban areas?",
+        "options": [
+          "ECON 301 Money and Banking",
+          "ECON 310 Urban and Regional Economics",
+          "ECON 401 Financial Institutions",
+          "ECON 419 Economics of Energy & Environmental Policy"
+        ],
+        "answer": "ECON 310 Urban and Regional Economics"
+      },
+      "Question 5": {
+        "text": "How many elective courses must students take for the B.A. in Economics?",
+        "options": [
+          "2",
+          "5",
+          "8",
+          "10"
+        ],
+        "answer": "5"
+      }
+    }
+  },
+  "Slide Deck 3: Minor in Economics": {
+    "Summary": "This slide deck outlines the requirements for a minor in Economics. Students need to complete 4 required courses, including macroeconomics, microeconomics, and either managerial or intermediate microeconomics. Additionally, they need to choose 2 elective courses from the list provided.",
+    "Quiz": {
+      "Question 1": {
+        "text": "How many required courses are needed for a minor in Economics?",
+        "options": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ],
+        "answer": "4"
+      },
+      "Question 2": {
+        "text": "Which two introductory courses are mandatory for the minor?",
+        "options": [
+          "ECON 101 and ECON 102",
+          "ECON 203 and ECON 206",
+          "ECON 317 and ECON 370",
+          "ECON 412 and ECON 438"
+        ],
+        "answer": "ECON 101 and ECON 102"
+      },
+      "Question 3": {
+        "text": "Students can choose between ECON 206 and which other course?",
+        "options": [
+          "ECON 207",
+          "ECON 208",
+          "ECON 301",
+          "ECON 310"
+        ],
+        "answer": "ECON 207"
+      },
+      "Question 4": {
+        "text": "What is the minimum number of elective courses required for the minor?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "answer": "2"
+      },
+      "Question 5": {
+        "text": "Is Intermediate Macroeconomics a required course for the minor?",
+        "options": [
+          "Yes",
+          "No"
+        ],
+        "answer": "Yes"
+      }
+    }
+  }
+}

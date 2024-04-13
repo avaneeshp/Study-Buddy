@@ -8,7 +8,6 @@ import random
 
 os.environ["GOOGLE_API_KEY"] = 'AIzaSyDK4aCLbBZxnDQtl6DWpoqEghI6yj49c1Y'
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
-model = genai.GenerativeModel('gemini-1.5-pro-latest')
 
 workdir = "."
 os.mkdir(os.path.join(workdir, 'images'))
@@ -28,20 +27,23 @@ for each_path in os.listdir(workdir):
 input = []
 
 prompt = """I am having trouble understanding databases. Here are the lecture slides associated with it. 
-Can you summarize them for me in an easy to understand way? Then, can you make a multiple choice quiz for all of them, 
-with 5 questions from each slide deck, and give me the answer key at the end of each section?"""
+Can you summarize them for me in an easy to understand way? Then, can you make a multiple choice quiz for each main topic, 
+with 5 questions from each main topic, and give me the answer key at the end of each section? Output in json format such that the output is a json file, organized by slide deck"""
 
 prompt2 = """I am having trouble understanding multicycle cpus. Here are some images from my lecture slides, can you 
-help me understand what's going on in 1 image?"""
+help me understand what's going on in 1 image? Output in json format such that the output is a json file"""
 
+model = genai.GenerativeModel('gemini-1.5-pro-latest', 
+                              system_instruction="You are a economics professor",
+                              generation_config={"temperature": 0.6})
 
 #  Return output in json format:
 # {Summary: summary}
 
-# reader = PdfReader("./pipelining.pdf")
-# text = ""
-# for page in reader.pages:
-#   text += page.extract_text() + "\n"
+reader = PdfReader("./Economics-Presentation.pdf")
+text = ""
+for page in reader.pages:
+  text += page.extract_text() + "\n"
 
 # reader = PdfReader("2.pdf")
 # text2 = ""
@@ -53,24 +55,34 @@ help me understand what's going on in 1 image?"""
 # for page in reader.pages:
 #   text3 += page.extract_text() + "\n"
 
-# input=[prompt, text]
-input2=[prompt2]
-size = len(os.listdir(os.path.join(workdir, "images")))
-listnum = random.sample(range(size), 5)
-counter = 0
-for img in os.listdir(os.path.join(workdir, "images")):
-        if counter in listnum:
-            print(str(img))
-            file = genai.upload_file(path=os.path.join(workdir, os.path.join("images", img)))
-            input2.append(file)
-            counter = counter + 1
+input=[prompt, text]
+# input2=[prompt2]
+# size = len(os.listdir(os.path.join(workdir, "images")))
+# listnum = random.sample(range(size), 5)
+# counter = 0
+# for img in os.listdir(os.path.join(workdir, "images")):
+#         if counter in listnum:
+#             print(str(img))
+#             file = genai.upload_file(path=os.path.join(workdir, os.path.join("images", img)))
+#             input2.append(file)
+#             counter = counter + 1
 
 
 
-import PIL.Image
-img = PIL.Image.open('./multicycle_cpu.png')
-response = model.generate_content([prompt2,img])
-print(response.text)
+# import PIL.Image
+# img = PIL.Image.open('./multicycle_cpu.png')
+response = model.generate_content(input)
+with open('./out', 'w') as f:
+    f.write(response.text)
+
+with open('./out', 'r+') as f:
+    lines = f.readlines()
+    f.seek(0)
+    f.truncate()
+    f.writelines(lines[1:-1])
+
+
+
 
 files = glob.glob('./images/*')
 for f in files:
