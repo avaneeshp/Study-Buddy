@@ -5,12 +5,9 @@ import Navbar from './components/Navbar.jsx'
 function App() {
   return (
     <div>
-      <Navbar />
+      <Navbar className="pt-5"/>
       <Home />
       <Home />
-      <Home />
-      <Home />
-      
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { Button, Navbar } from "flowbite-react";
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import navbarLogo from "../assets/navbarLogo.png";
 import "../App.css"
 
@@ -8,8 +8,7 @@ function Component() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Set the state to true if scrolled more than 50px, for example
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 35);
     };
 
     // Add the scroll event listener
@@ -19,9 +18,21 @@ function Component() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Define the gradient style as a constant
+  const gradientBackground = 'linear-gradient(90deg, #000026 0%, #2c3e50 50%, #4c669f 100%)';
+
+  // Define navbar styles based on scroll state
+  const navbarStyle = {
+    transition: 'all 0.3s ease-in-out',
+    backgroundColor: isScrolled ? '#2c3e50' : 'transparent',
+    borderRadius: isScrolled ? '50px' : '0',  // Adjust this value for desired roundness
+    boxShadow: isScrolled ? '0 2px 4px rgba(0,0,0,0.1)' : 'none',
+    border: isScrolled ? '2px solid white' : 'none',
+    top: isScrolled ? '10px' : '0'  // Adds padding above the navbar when scrolled
+  };
 
   return (
-    <Navbar style={{ backgroundColor: '#000026' }} className={`fixed w-full z-50 transition-all duration-900 ease-in-out ${isScrolled ? 'rounded-full shadow-lg border-2 border-white' : 'rounded-none'}`}>
+    <Navbar style={navbarStyle} className="fixed top-0 w-full z-50">
       <div className="flex justify-between items-center w-full">
         {/* Navbar Brand */}
         <Navbar.Brand href="/">
@@ -33,12 +44,12 @@ function Component() {
         <div className="flex items-center pr-10">
           {/* Navbar Links */}
           <div className="flex list-none items-center px-10">
-            <Navbar.Link href="#" className="nav-link text-xl text-white px-4 py-2 relative">Home</Navbar.Link>
-            <Navbar.Link href="#" className="nav-link text-xl text-white px-4 py-2 relative">About Us</Navbar.Link>
+            <Navbar.Link href="/" className="nav-link text-xl text-white px-4 py-2 relative hover:text-white">Home</Navbar.Link>
+            <Navbar.Link href="/about-us" className="nav-link text-xl text-white px-4 py-2 relative">About Us</Navbar.Link>
           </div>
           
           {/* Action Button */}
-          <Button>Study Now!</Button>
+          <Button className="text-white">Study Now!</Button>
         </div>
 
         {/* Responsive Navbar Toggle */}
