@@ -1,0 +1,54 @@
+{
+  "quiz": {
+    "question1": {
+      "text": "What is the main drawback of a single-cycle datapath design?",
+      "options": {
+        "a": "It is too complex to implement.",
+        "b": "All instructions run at the speed of the slowest instruction.",
+        "c": "It requires too many clock cycles.",
+        "d": "It cannot handle complex instructions."
+      },
+      "answer": "b"
+    },
+    "question2": {
+      "text": "In the LC2K datapath, what is the purpose of the sign extend unit?",
+      "options": {
+        "a": "To convert negative numbers to positive numbers.",
+        "b": "To extend the sign bit of a 16-bit value to 32 bits.",
+        "c": "To perform arithmetic operations on signed numbers.",
+        "d": "To store the results of arithmetic operations."
+      },
+      "answer": "b"
+    },
+    "question3": {
+      "text": "Which instruction in LC2K requires modifications to the datapath for implementation?",
+      "options": {
+        "a": "ADD",
+        "b": "LW",
+        "c": "SW",
+        "d": "JALR"
+      },
+      "answer": "d"
+    },
+    "question4": {
+      "text": "How does a multi-cycle datapath improve performance compared to a single-cycle datapath?",
+      "options": {
+        "a": "It allows for faster clock speeds.",
+        "b": "It reduces the number of clock cycles needed for most instructions.",
+        "c": "It simplifies the control logic.",
+        "d": "It requires less hardware."
+      },
+      "answer": "b"
+    },
+    "question5": {
+      "text": "What is the purpose of the state machine in a multi-cycle datapath?",
+      "options": {
+        "a": "To store the current instruction.",
+        "b": "To control the sequence of operations for each instruction.",
+        "c": "To perform arithmetic and logical operations.",
+        "d": "To access data from memory."
+      },
+      "answer": "b"
+    }
+  }
+}

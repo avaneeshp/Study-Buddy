@@ -1,165 +1,97 @@
+```json
 {
-  "Slide Deck 1: Why Pick an Economics Major?": {
-    "Summary": "This slide deck highlights the benefits of choosing Economics as a major. It emphasizes the analytical and quantitative skills developed, leading to high-paying jobs in various sectors like banking, government, consulting, and financial firms. The major also prepares students for advanced degrees like MBAs and JDs. The department offers both a B.A. in Economics and a minor, with specific course requirements outlined.",
-    "Quiz": {
-      "Question 1": {
-        "text": "What are some of the reasons to study Economics?",
-        "options": [
-          "To pursue an advanced degree like an MBA or JD",
-          "To secure a high-paying job",
-          "To understand financial markets and the global economy",
-          "All of the above"
-        ],
-        "answer": "All of the above"
+  "Summary": "## EECS 370 - Lecture 11: Single & Multi-Cycle Datapath Summary
+
+This lecture delves into the design and implementation of datapaths in processors, focusing on both single-cycle and multi-cycle architectures. 
+
+**Key Concepts:**
+
+* **Datapath:** The component of a processor responsible for data movement and manipulation. It consists of various building blocks like registers, ALU, control unit, and memory.
+* **Single-Cycle Datapath:** Each instruction completes in one clock cycle, making it simple but potentially inefficient for instructions with varying execution times. 
+* **Multi-Cycle Datapath:** Instructions can take multiple cycles to execute, allowing for better performance and resource utilization. Different instructions have varying cycle counts based on their complexity.
+* **LC2K Datapath:** The specific datapath architecture used as an example in the lecture, illustrating the implementation of various instructions like ADD, NOR, LW, SW, and BEQ.
+* **Control Unit:** Governs the datapath by generating control signals based on the current instruction and state.
+* **State Machine:** Manages the control flow in a multi-cycle datapath, transitioning between states based on the instruction and current cycle.
+* **Challenges of Single-Cycle Datapath:** 
+    * Performance bottleneck due to the slowest instruction determining the clock cycle time.
+    * Inefficient resource utilization as datapath elements cannot be reused during a single cycle.
+* **Advantages of Multi-Cycle Datapath:**
+    * Improved performance by allowing faster instructions to complete in fewer cycles.
+    * Efficient resource utilization through the reuse of datapath elements across multiple cycles.
+    * More complex control logic required to manage state transitions and control signals.
+
+**Instruction Execution Examples:**
+
+The lecture provides detailed explanations of how various LC2K instructions are executed in both single-cycle and multi-cycle datapaths, highlighting the control signals and datapath elements involved in each step.
+
+**Transition to Pipelining:**
+
+The lecture concludes by introducing the concept of pipelining, which further enhances performance by overlapping the execution of multiple instructions. 
+
+**Overall, the lecture provides a comprehensive understanding of datapath design principles and trade-offs between single-cycle and multi-cycle architectures, laying the groundwork for further exploration of advanced processor design techniques like pipelining.** 
+"
+}
+``` 
+```json
+{
+  "quiz": {
+    "question1": {
+      "text": "What is the main difference between single-cycle and multi-cycle datapath implementations?",
+      "options": {
+        "a": "Single-cycle is more complex to design and control.",
+        "b": "Multi-cycle allows for faster clock speeds and better performance.",
+        "c": "Single-cycle is more efficient in terms of resource utilization.",
+        "d": "Multi-cycle is only suitable for simple instructions."
       },
-      "Question 2": {
-        "text": "What skills does an Economics major emphasize?",
-        "options": [
-          "Creative writing and communication",
-          "Analytical and quantitative skills",
-          "Foreign language proficiency",
-          "Artistic expression"
-        ],
-        "answer": "Analytical and quantitative skills"
+      "answer": "b"
+    },
+    "question2": {
+      "text": "What is the purpose of the control unit in a datapath?",
+      "options": {
+        "a": "To perform arithmetic and logical operations.",
+        "b": "To store data temporarily during execution.",
+        "c": "To fetch instructions from memory.",
+        "d": "To generate control signals that direct data flow."
       },
-      "Question 3": {
-        "text": "In what sectors do Economics graduates typically find jobs?",
-        "options": [
-          "Education and healthcare",
-          "Retail and hospitality",
-          "Banking, government, consulting, and financial firms",
-          "Non-profit organizations"
-        ],
-        "answer": "Banking, government, consulting, and financial firms"
+      "answer": "d"
+    },
+    "question3": {
+      "text": "In the LC2K datapath, how is the next PC value calculated for a branch instruction?",
+      "options": {
+        "a": "By adding 1 to the current PC.",
+        "b": "By adding the offset to the current PC.",
+        "c": "By adding 1 and the offset to the current PC.",
+        "d": "By loading the offset value from memory."
       },
-      "Question 4": {
-        "text": "How many required Economics courses are needed for a B.A. in Economics?",
-        "options": [
-          "5",
-          "10",
-          "15",
-          "20"
-        ],
-        "answer": "10"
+      "answer": "c"
+    },
+    "question4": {
+      "text": "What is the role of the sign extend unit in the LC2K datapath?",
+      "options": {
+        "a": "To convert signed numbers to unsigned numbers.",
+        "b": "To extend the sign bit of an immediate value to match the word size.",
+        "c": "To perform sign extension on register values.",
+        "d": "To calculate the memory address for load and store instructions."
       },
-      "Question 5": {
-        "text": "What is the credit requirement for elective Economics courses in the B.A. program?",
-        "options": [
-          "6 credits",
-          "12 credits",
-          "15 credits",
-          "30 credits"
-        ],
-        "answer": "15 credits"
-      }
+      "answer": "b"
+    },
+    "question5": {
+      "text": "Why does the JALR instruction require additional datapath elements in the LC2K implementation?",
+      "options": {
+        "a": "It needs to store the current PC value before jumping to a new address.",
+        "b": "It needs to calculate a complex jump address based on multiple registers.",
+        "c": "It needs to perform both a jump and a register write operation.",
+        "d": "It requires a different ALU operation compared to other instructions."
+      },
+      "answer": "c"
     }
   },
-  "Slide Deck 2: B.A. Degree in Economics": {
-    "Summary": "This slide deck details the course requirements for the B.A. in Economics program. It lists the 10 required courses, covering topics like macroeconomics, microeconomics, econometrics, international economics, and business forecasting. Additionally, it presents a range of elective courses students can choose from, including real estate, social problems, financial economics, money and banking, public finance, and labor economics.",
-    "Quiz": {
-      "Question 1": {
-        "text": "Which course introduces students to the fundamentals of macroeconomics?",
-        "options": [
-          "ECON 101 Applied Macroeconomics",
-          "ECON 102 Applied Microeconomics",
-          "ECON 203 Fundamental Maths for Economics",
-          "ECON 370 International Economics"
-        ],
-        "answer": "ECON 101 Applied Macroeconomics"
-      },
-      "Question 2": {
-        "text": "What is the course code for Quantitative Methods for Economics?",
-        "options": [
-          "ECON 206",
-          "ECON 317",
-          "ECON 390",
-          "ECON 412"
-        ],
-        "answer": "ECON 317"
-      },
-      "Question 3": {
-        "text": "Students can choose between Managerial Economics and which other course?",
-        "options": [
-          "Intermediate Macroeconomics",
-          "Intermediate Microeconomics",
-          "Public Finance",
-          "Development of Economic Thought"
-        ],
-        "answer": "Intermediate Microeconomics"
-      },
-      "Question 4": {
-        "text": "Which elective course focuses on the economic aspects of urban areas?",
-        "options": [
-          "ECON 301 Money and Banking",
-          "ECON 310 Urban and Regional Economics",
-          "ECON 401 Financial Institutions",
-          "ECON 419 Economics of Energy & Environmental Policy"
-        ],
-        "answer": "ECON 310 Urban and Regional Economics"
-      },
-      "Question 5": {
-        "text": "How many elective courses must students take for the B.A. in Economics?",
-        "options": [
-          "2",
-          "5",
-          "8",
-          "10"
-        ],
-        "answer": "5"
-      }
-    }
-  },
-  "Slide Deck 3: Minor in Economics": {
-    "Summary": "This slide deck outlines the requirements for a minor in Economics. Students need to complete 4 required courses, including macroeconomics, microeconomics, and either managerial or intermediate microeconomics. Additionally, they need to choose 2 elective courses from the list provided.",
-    "Quiz": {
-      "Question 1": {
-        "text": "How many required courses are needed for a minor in Economics?",
-        "options": [
-          "2",
-          "4",
-          "6",
-          "8"
-        ],
-        "answer": "4"
-      },
-      "Question 2": {
-        "text": "Which two introductory courses are mandatory for the minor?",
-        "options": [
-          "ECON 101 and ECON 102",
-          "ECON 203 and ECON 206",
-          "ECON 317 and ECON 370",
-          "ECON 412 and ECON 438"
-        ],
-        "answer": "ECON 101 and ECON 102"
-      },
-      "Question 3": {
-        "text": "Students can choose between ECON 206 and which other course?",
-        "options": [
-          "ECON 207",
-          "ECON 208",
-          "ECON 301",
-          "ECON 310"
-        ],
-        "answer": "ECON 207"
-      },
-      "Question 4": {
-        "text": "What is the minimum number of elective courses required for the minor?",
-        "options": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "answer": "2"
-      },
-      "Question 5": {
-        "text": "Is Intermediate Macroeconomics a required course for the minor?",
-        "options": [
-          "Yes",
-          "No"
-        ],
-        "answer": "Yes"
-      }
-    }
+  "answerKey": {
+    "question1": "b",
+    "question2": "d",
+    "question3": "c",
+    "question4": "b",
+    "question5": "c"
   }
 }
+``` 

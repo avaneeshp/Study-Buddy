@@ -1,0 +1,104 @@
+{
+  "quiz": {
+    "question1": {
+      "text": "What is the primary goal of calibration?",
+      "options": {
+        "A": "To ensure the accuracy and reliability of measurement instruments.",
+        "B": "To make instruments more aesthetically pleasing.",
+        "C": "To increase the complexity of measurement procedures.",
+        "D": "To reduce the cost of measurement instruments."
+      },
+      "answer": "A"
+    },
+    "question2": {
+      "text": "Why is calibration important in scientific research?",
+      "options": {
+        "A": "It allows researchers to compare their results with others accurately.",
+        "B": "It makes research more expensive and time-consuming.",
+        "C": "It guarantees the success of every experiment.",
+        "D": "It replaces the need for careful experimental design."
+      },
+      "answer": "A"
+    },
+    "question3": {
+      "text": "What is a calibration standard?",
+      "options": {
+        "A": "A document outlining the steps of a calibration procedure.",
+        "B": "A highly accurate and traceable reference used for comparison.",
+        "C": "A type of measurement instrument with built-in self-calibration.",
+        "D": "A software program used to automate calibration tasks."
+      },
+      "answer": "B"
+    },
+    "question4": {
+      "text": "How often should instruments be calibrated?",
+      "options": {
+        "A": "It depends on factors such as the instrument's usage, accuracy requirements, and manufacturer recommendations.",
+        "B": "Once a year, regardless of usage or type of instrument.",
+        "C": "Only when the instrument shows visible signs of malfunction.",
+        "D": "Calibration is not necessary for modern digital instruments."
+      },
+      "answer": "A"
+    },
+    "question5": {
+      "text": "What is the difference between calibration and adjustment?",
+      "options": {
+        "A": "Calibration is comparing an instrument to a standard, while adjustment is correcting any deviations found.",
+        "B": "Adjustment is a more advanced form of calibration.",
+        "C": "Calibration and adjustment are synonymous terms.",
+        "D": "Adjustment is only necessary for analog instruments."
+      },
+      "answer": "A"
+    },
+    "question6": {
+      "text": "What is traceability in the context of calibration?",
+      "options": {
+        "A": "The ability to track an instrument's location within a facility.",
+        "B": "The unbroken chain of comparisons connecting an instrument's measurements to a recognized standard.",
+        "C": "A record of all the adjustments made to an instrument over time.",
+        "D": "The ability to trace the ownership history of an instrument."
+      },
+      "answer": "B"
+    },
+    "question7": {
+      "text": "Who is typically responsible for performing calibrations?",
+      "options": {
+        "A": "Trained technicians or metrologists with expertise in calibration procedures.",
+        "B": "Any individual who uses the instrument regularly.",
+        "C": "The manufacturer of the instrument.",
+        "D": "The research team leader or project manager."
+      },
+      "answer": "A"
+    },
+    "question8": {
+      "text": "What is a calibration certificate?",
+      "options": {
+        "A": "A document issued by a calibration laboratory that provides evidence of an instrument's traceability and accuracy.",
+        "B": "A warranty document provided by the instrument manufacturer.",
+        "C": "A training certificate for individuals who perform calibrations.",
+        "D": "A purchase receipt for a calibration standard."
+      },
+      "answer": "A"
+    },
+    "question9": {
+      "text": "What are some common sources of measurement error that calibration can help identify?",
+      "options": {
+        "A": "Environmental factors, instrument drift, operator error, and reference standard uncertainties.",
+        "B": "Only human errors in reading or recording measurements.",
+        "C": "Errors introduced by using the wrong type of instrument for the measurement.",
+        "D": "Calibration cannot identify sources of error; it only ensures accuracy."
+      },
+      "answer": "A"
+    },
+    "question10": {
+      "text": "What is the ultimate benefit of proper calibration?",
+      "options": {
+        "A": "Increased confidence in the validity and reliability of measurement results.",
+        "B": "Reduced costs associated with instrument maintenance.",
+        "C": "Elimination of all measurement errors.",
+        "D": "Compliance with legal regulations, regardless of measurement accuracy."
+      },
+      "answer": "A" 
+    }
+  }
+}
