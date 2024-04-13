@@ -1,0 +1,97 @@
+```json
+{
+  "Summary": "## EECS 370 - Lecture 11: Single & Multi-Cycle Datapath Summary
+
+This lecture delves into the design and implementation of datapaths in processors, focusing on both single-cycle and multi-cycle architectures. 
+
+**Key Concepts:**
+
+* **Datapath:** The component of a processor responsible for data movement and manipulation. It consists of various building blocks like registers, ALU, control unit, and memory.
+* **Single-Cycle Datapath:** Each instruction completes in one clock cycle, making it simple but potentially inefficient for instructions with varying execution times. 
+* **Multi-Cycle Datapath:** Instructions can take multiple cycles to execute, allowing for better performance and resource utilization. Different instructions have varying cycle counts based on their complexity.
+* **LC2K Datapath:** The specific datapath architecture used as an example in the lecture, illustrating the implementation of various instructions like ADD, NOR, LW, SW, and BEQ.
+* **Control Unit:** Governs the datapath by generating control signals based on the current instruction and state.
+* **State Machine:** Manages the control flow in a multi-cycle datapath, transitioning between states based on the instruction and current cycle.
+* **Challenges of Single-Cycle Datapath:** 
+    * Performance bottleneck due to the slowest instruction determining the clock cycle time.
+    * Inefficient resource utilization as datapath elements cannot be reused during a single cycle.
+* **Advantages of Multi-Cycle Datapath:**
+    * Improved performance by allowing faster instructions to complete in fewer cycles.
+    * Efficient resource utilization through the reuse of datapath elements across multiple cycles.
+    * More complex control logic required to manage state transitions and control signals.
+
+**Instruction Execution Examples:**
+
+The lecture provides detailed explanations of how various LC2K instructions are executed in both single-cycle and multi-cycle datapaths, highlighting the control signals and datapath elements involved in each step.
+
+**Transition to Pipelining:**
+
+The lecture concludes by introducing the concept of pipelining, which further enhances performance by overlapping the execution of multiple instructions. 
+
+**Overall, the lecture provides a comprehensive understanding of datapath design principles and trade-offs between single-cycle and multi-cycle architectures, laying the groundwork for further exploration of advanced processor design techniques like pipelining.** 
+"
+}
+``` 
+```json
+{
+  "quiz": {
+    "question1": {
+      "text": "What is the main difference between single-cycle and multi-cycle datapath implementations?",
+      "options": {
+        "a": "Single-cycle is more complex to design and control.",
+        "b": "Multi-cycle allows for faster clock speeds and better performance.",
+        "c": "Single-cycle is more efficient in terms of resource utilization.",
+        "d": "Multi-cycle is only suitable for simple instructions."
+      },
+      "answer": "b"
+    },
+    "question2": {
+      "text": "What is the purpose of the control unit in a datapath?",
+      "options": {
+        "a": "To perform arithmetic and logical operations.",
+        "b": "To store data temporarily during execution.",
+        "c": "To fetch instructions from memory.",
+        "d": "To generate control signals that direct data flow."
+      },
+      "answer": "d"
+    },
+    "question3": {
+      "text": "In the LC2K datapath, how is the next PC value calculated for a branch instruction?",
+      "options": {
+        "a": "By adding 1 to the current PC.",
+        "b": "By adding the offset to the current PC.",
+        "c": "By adding 1 and the offset to the current PC.",
+        "d": "By loading the offset value from memory."
+      },
+      "answer": "c"
+    },
+    "question4": {
+      "text": "What is the role of the sign extend unit in the LC2K datapath?",
+      "options": {
+        "a": "To convert signed numbers to unsigned numbers.",
+        "b": "To extend the sign bit of an immediate value to match the word size.",
+        "c": "To perform sign extension on register values.",
+        "d": "To calculate the memory address for load and store instructions."
+      },
+      "answer": "b"
+    },
+    "question5": {
+      "text": "Why does the JALR instruction require additional datapath elements in the LC2K implementation?",
+      "options": {
+        "a": "It needs to store the current PC value before jumping to a new address.",
+        "b": "It needs to calculate a complex jump address based on multiple registers.",
+        "c": "It needs to perform both a jump and a register write operation.",
+        "d": "It requires a different ALU operation compared to other instructions."
+      },
+      "answer": "c"
+    }
+  },
+  "answerKey": {
+    "question1": "b",
+    "question2": "d",
+    "question3": "c",
+    "question4": "b",
+    "question5": "c"
+  }
+}
+``` 
