@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+/* Add this to your styles.css or equivalent */
+.nav-link::after {
+  color: white;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px; /* Adjust height as needed */
+  background: white; /* This is the color of the sliding bar */
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
