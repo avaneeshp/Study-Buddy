@@ -1,4 +1,4 @@
-import About from './components/About.jsx'
+import Why from './components/Why.jsx'
 import Home from './components/Home.jsx'
 import Navbar from './components/Navbar.jsx'
 
@@ -7,7 +7,7 @@ function App() {
     <div>
       <Navbar className="pt-5"/>
       <Home />
-      <Home />
+      <Why />
     </div>
   );
 }

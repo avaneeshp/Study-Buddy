@@ -56,10 +56,17 @@
 }
 
 .powerful-results {
-  background: linear-gradient(to right, #E6E6E6 0%, #FFFACD 100%);
+  background: linear-gradient(to right, #F0E2B6 0%, #F0E2B6 50%, #BFC1C2 100%); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2em;
   font-weight: bold;
   padding-left: 100px;
+}
+
+.home-background {
+  background: linear-gradient(to bottom, #000026 0%, #2c3e50 50%, #f8f8ff 100%);
+  min-height: 100vh;
+  color: white;
+  padding: 100px;
 }

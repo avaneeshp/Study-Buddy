@@ -22,11 +22,21 @@ function Home() {
           <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Effortless Studying</h1>
           <h1 className="powerful-results" style={{ fontSize: '2.5rem', fontWeight: 'bold'}}>Powerful Results</h1>
           <p style={{ marginTop: '20px', fontSize: '1.25rem' }}>
-            See how you can learn a semester's worth of content instantly with StudyBuddy.
+            Introducing your new tutor! See how you can learn a semester's worth of content instantly with the power of AI. No cheats, no hacks, it's just you and your  
+              {" "}<span style={{
+                background: 'linear-gradient(to right, #F0E2B6 0%, #f8f8ff 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                fontWeight: 'bold'  // Optional, for added emphasis
+              }}>
+              StudyBuddy.
+            </span>
           </p>
-          <Button color="light" className="mt-4">
-            Try it Free
-          </Button>
+          <div style={{ width: '100%', display: 'flex', marginLeft: '30px', marginTop: '60px' }}>
+            <Button color="light">
+              Try it Free
+            </Button>
+          </div>
         </div>
       </div>
     </div>
