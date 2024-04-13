@@ -1,10 +1,27 @@
 import { Button, Navbar } from "flowbite-react";
+import React, {useState, useEffect} from 'react';
 import navbarLogo from "../assets/navbarLogo.png";
 import "../App.css"
 
 function Component() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Set the state to true if scrolled more than 50px, for example
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    // Add the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove the event listener on cleanup
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   return (
-    <Navbar style={{ backgroundColor: '#000026' }}>
+    <Navbar style={{ backgroundColor: '#000026' }} className={`fixed w-full z-50 transition-all duration-900 ease-in-out ${isScrolled ? 'rounded-full shadow-lg border-2 border-white' : 'rounded-none'}`}>
       <div className="flex justify-between items-center w-full">
         {/* Navbar Brand */}
         <Navbar.Brand href="/">
