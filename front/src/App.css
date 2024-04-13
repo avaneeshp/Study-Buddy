@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+/* Add this to your styles.css or equivalent */
+.nav-link::after {
+  color: white !important;
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px; /* Adjust height as needed */
+  background: white; /* This is the color of the sliding bar */
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: white !important;  /* Forces the color to remain white on hover */
+}
+
+.powerful-results {
+  background: linear-gradient(to right, #E6E6E6 0%, #FFFACD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em;
+  font-weight: bold;
+  padding-left: 100px;
+}
