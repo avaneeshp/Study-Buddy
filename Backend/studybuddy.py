@@ -48,7 +48,7 @@ def process_quiz():
     quizzes = glob.glob('./*_quiz.json')
     combined_questions = []
     for file in quizzes:
-        with open(file.filename, 'r') as file:
+        with open(file, 'r') as file:
             quiz = json.load(file)
             combined_questions.extend(quiz['quiz'].values())
     random.shuffle(combined_questions)
