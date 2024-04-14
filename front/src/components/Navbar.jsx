@@ -1,9 +1,12 @@
 import { Button, Navbar } from "flowbite-react";
 import React, { useState, useEffect } from 'react';
-import navbarLogo from "../assets/navbarLogo.png";
+import navbarLogo from "../assets/logoDump/navbarLogo.png";
 import "../App.css"
+import { useLocation } from 'react-router-dom';
 
-function Component() {
+function Component({ fixed }) {
+  const location = useLocation();
+  const isFixed = !location.pathname === '/'; // Assuming you want it fixed only on the home page
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -45,11 +48,11 @@ function Component() {
           {/* Navbar Links */}
           <div className="flex list-none items-center px-10">
             <Navbar.Link href="/" className="nav-link text-xl text-white px-4 py-2 relative hover:text-white">Home</Navbar.Link>
-            <Navbar.Link href="/about-us" className="nav-link text-xl text-white px-4 py-2 relative">About Us</Navbar.Link>
+            <Navbar.Link href="/about" className="nav-link text-xl text-white px-4 py-2 relative">About Us</Navbar.Link>
           </div>
           
           {/* Action Button */}
-          <Button className="text-white">Study Now!</Button>
+          <Button className="try-it-free-btn" href="/feature">Study Now!</Button>
         </div>
 
         {/* Responsive Navbar Toggle */}

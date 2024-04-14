@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'flowbite-react';
-import yourImage from '../assets/mascotNoBG.png'; // Replace with your actual image import
+import yourImage from '../assets/logoDump/mascotNoBG.png'; // Replace with your actual image import
 
 function Home() {
 
@@ -32,9 +32,9 @@ function Home() {
               StudyBuddy.
             </span>
           </p>
-          <div style={{ width: '100%', display: 'flex', marginLeft: '30px', marginTop: '60px' }}>
-            <Button color="light">
-              Try it Free
+          <div style={{ width: '100%', display: 'flex', marginLeft: '10px', marginTop: '40px' }}>
+            <Button className="try-it-free-btn" href='/feature'>
+              Study Now
             </Button>
           </div>
         </div>
