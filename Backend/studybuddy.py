@@ -26,6 +26,7 @@ quizzes = []
 
 @app.route('/process_summary', methods=['POST'])
 def process_summary():
+    cleaner()
     files = request.files.getlist('file')
     topic = request.form['topic']
     results.clear()
@@ -35,11 +36,11 @@ def process_summary():
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
             file.save(file_path)
             converter(file, topic)
-            outputpath = './outputsum.json'
+            outputpath = './' + file.filename + '_summary.json'
             with open(outputpath, 'r') as out:
                 data = json.load(out)
                 results.append(data)
-            outputpath = './outputquiz.json'
+            outputpath = './' + file.filename + '_quiz.json'
             with open(outputpath, 'r') as out:
                 data = json.load(out)
                 quizzes.append(data)

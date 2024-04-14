@@ -26,49 +26,81 @@ def converter(file, topic):
         text = ""
         for page in reader.pages:
             text += page.extract_text() + "\n"
+
         inputsum=[promptsum, text]
         inputquiz=[promptquiz, text]
+
         response = model.generate_content(inputsum)
-        with open('./outsum.json', 'w') as f:
+        with open('./' + file.filename + '_summary.json', 'w') as f:
             f.write(response.text)
-        with open('./outsum.json', 'r+') as f:
+        with open('./' + file.filename + '_summary.json', 'r+') as f:
             lines = f.readlines()
             f.seek(0)
             f.truncate()
             f.writelines(lines[1:-1])
 
         response = model.generate_content(inputquiz)
-        with open('./outquiz.json', 'w') as f:
+        with open('./' + file.filename + '_quiz.json', 'w') as f:
             f.write(response.text)
-        with open('./outquiz.json', 'r+') as f:
+        with open('./' + file.filename + '_quiz.json', 'r+') as f:
             lines = f.readlines()
             f.seek(0)
             f.truncate()
             f.writelines(lines[1:-1])
+
+    elif ".txt" in file.filename:
+        with open(file.filename, 'r') as file:
+            text = file.read()
+            
+        inputsum=[promptsum, text]
+        inputquiz=[promptquiz, text]
+
+        response = model.generate_content(inputsum)
+        with open('./' + file.filename + '_summary.json', 'w') as f:
+            f.write(response.text)
+        with open('./' + file.filename + '_summary.json', 'r+') as f:
+            lines = f.readlines()
+            f.seek(0)
+            f.truncate()
+            f.writelines(lines[1:-1])
+
+        response = model.generate_content(inputquiz)
+        with open('./' + file.filename + '_quiz.json', 'w') as f:
+            f.write(response.text)
+        with open('./' + file.filename + '_quiz.json', 'r+') as f:
+            lines = f.readlines()
+            f.seek(0)
+            f.truncate()
+            f.writelines(lines[1:-1])
+
     else:
         img = PIL.Image.open(file.filename)
         inputsum=[promptsum, img]
         inputquiz=[promptquiz, text]
+        
         response = model.generate_content(inputsum)
-        with open('./outsum.json', 'w') as f:
+        with open('./' + file.filename + '_summary.json', 'w') as f:
             f.write(response.text)
-        with open('./outsum.json', 'r+') as f:
+        with open('./' + file.filename + '_summary.json', 'r+') as f:
             lines = f.readlines()
             f.seek(0)
             f.truncate()
             f.writelines(lines[1:-1])
 
         response = model.generate_content(inputquiz)
-        with open('./outquiz.json', 'w') as f:
+        with open('./' + file.filename + '_quiz.json', 'w') as f:
             f.write(response.text)
-        with open('./outquiz.json', 'r+') as f:
+        with open('./' + file.filename + '_quiz.json', 'r+') as f:
             lines = f.readlines()
             f.seek(0)
             f.truncate()
             f.writelines(lines[1:-1])
 
 
-        
+def cleaner():
+    json_files = glob.glob(os.path.join('./', '*.json'))
+    for file_path in json_files:
+        os.remove(file_path)
 
 # os.mkdir(os.path.join(workdir, 'images'))
 
