@@ -32,9 +32,9 @@ function Home() {
               StudyBuddy.
             </span>
           </p>
-          <div style={{ width: '100%', display: 'flex', marginLeft: '30px', marginTop: '60px' }}>
-            <Button color="light">
-              Try it Free
+          <div style={{ width: '100%', display: 'flex', marginLeft: '10px', marginTop: '40px' }}>
+            <Button className="try-it-free-btn">
+              Use Now
             </Button>
           </div>
         </div>

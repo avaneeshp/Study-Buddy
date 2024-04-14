@@ -70,3 +70,15 @@
   color: white;
   padding: 100px;
 }
+
+.try-it-free-btn {
+  background-color: white; /* Normal state background */
+  color: #000; /* Text color for normal state */
+  border: 2px solid white; /* Optional: Gold border to hint at the hover state */
+}
+
+.try-it-free-btn:hover {
+  background-image: linear-gradient(to right, #BFC1C2, #F0E2B6);
+  color: white; /* Change text color on hover if needed */
+}
+

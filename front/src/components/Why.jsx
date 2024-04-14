@@ -9,8 +9,13 @@ function Why() {
     WebkitTextFillColor: 'transparent',
   };
 
+  const gradientStyle = {
+    background: 'linear-gradient(90deg, #000026 0%, #2c3e50 50%, #4c669f 100%)', // Ensures the component takes at least the full height of the viewport
+    padding: '100px 0' // Adds padding at the top and bottom of the entire component
+  };
+
   return (
-    <div className="why-component" style={{ background: 'linear-gradient(to bottom, #000026, #2c3e50, #f8f8ff)', minHeight: '100vh', color: 'white', padding: '4rem 1rem', textAlign: 'center' }}>
+    <div className="why-component" style={{ background: 'linear-gradient(90deg, #000026 0%, #2c3e50 50%, #4c669f 100%)', minHeight: '100vh', color: 'white', padding: '4rem 1rem', textAlign: 'center' }}>
       <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Trusted by students and institutions worldwide</h2>
       
       <div className="statistics" style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', margin: '2rem 0' }}>
