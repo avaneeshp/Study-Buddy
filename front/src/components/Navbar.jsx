@@ -49,7 +49,7 @@ function Component() {
           </div>
           
           {/* Action Button */}
-          <Button className="try-it-free-btn">Study Now!</Button>
+          <Button className="try-it-free-btn" href="/feature">Study Now!</Button>
         </div>
 
         {/* Responsive Navbar Toggle */}

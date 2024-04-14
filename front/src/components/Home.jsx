@@ -33,7 +33,7 @@ function Home() {
             </span>
           </p>
           <div style={{ width: '100%', display: 'flex', marginLeft: '10px', marginTop: '40px' }}>
-            <Button className="try-it-free-btn">
+            <Button className="try-it-free-btn" href='/feature'>
               Use Now
             </Button>
           </div>
