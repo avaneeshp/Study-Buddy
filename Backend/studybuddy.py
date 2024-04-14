@@ -14,20 +14,41 @@ CORS(app)
 #     text = data['text']
 #     response = {'message': 'Text processed', 'data': text}
 #     return jsonify(response)
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg'}
+app.config['UPLOAD_FOLDER'] = './'
 
-@app.route('/process_msg', methods=['POST'])
-def process_msg():
-    pdf_files = request.files['pdf']
-    txt_files = request.args['input']
-    for i in pdf_files:
-        i.save(os.path.join("./Backend", o.filename))
-        pdftojson()
-    with open('./Backend/outsum.json', 'r') as file:
-        data1 = json.load(file)
-    with open('./Backend/outquiz.json', 'r') as file:
-        data2 = json.load(file)
-    return [jsonify(data1),jsonify(data2)]
 
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+results = []
+quizzes = []
+
+@app.route('/process_summary', methods=['POST'])
+def process_summary():
+    files = request.files.getlist('file')
+    topic = request.form['topic']
+    results.clear()
+    quizzes.clear()
+    for file in files:
+        if file and allowed_file(file.filename):
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+            file.save(file_path)
+            converter(file, topic)
+            outputpath = './outputsum.json'
+            with open(outputpath, 'r') as out:
+                data = json.load(out)
+                results.append(data)
+            outputpath = './outputquiz.json'
+            with open(outputpath, 'r') as out:
+                data = json.load(out)
+                quizzes.append(data)
+    return jsonify(results)
+
+@app.route('/process_quiz', methods=['POST'])
+def process_quiz():
+    return jsonify(quizzes)
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
