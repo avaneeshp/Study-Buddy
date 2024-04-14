@@ -3,16 +3,14 @@
   }
   
   .content-box {
-    background: linear-gradient(to bottom, #ffffff, #f8f8ff);
+    background: linear-gradient(to top left, rgb(250, 217, 250), #f8f8ff 70%);
     border-radius: 15px;
     padding: 2rem;
     margin: 4rem auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: #000;
     max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 0px;;
   }
   
   .api-output {
@@ -21,6 +19,7 @@
     padding: 1rem;
     border: 1px solid #ddd;
     width: 100%;
+    box-shadow: 10px 10px 5px 12px lightblue;
   }
   
   .api-response {
@@ -28,39 +27,12 @@
     padding: 0.5rem 0;
   }
   
-  .input-section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .input-section input[type="file"],
-  .input-section input[type="text"] {
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .input-section button {
-    background-color: #1a8cd8;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    margin-top: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .input-section button:hover {
-    background-color: #1380c6;
-  }
-  
   .quiz-section {
     margin-top: 2rem;
+    flex:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .quiz-section h2 {
@@ -73,6 +45,7 @@
     margin: 0.5rem 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%;
   }
   
   .quiz-section button {
@@ -147,7 +120,7 @@
 
   .figure-component {
     padding: 4rem 1rem;
-    background: linear-gradient(to bottom right, #000026 20%, rgb(136, 19, 136) 100%);
+    background: linear-gradient(to right, #000026 40%, rgb(136, 19, 136) 100%);
     min-height: 100vh; /* Ensure it takes at least the full height of the viewport */
   }
 
@@ -163,3 +136,188 @@
     overflow-y: auto; /* Allow scrolling when content overflows */
     border: 1px solid #ddd; /* Border for definition */
   }
+
+  .output-box {
+    background: #FFF; /* Or another color based on your theme */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 1rem; /* Padding inside the box */
+    margin-top: 2rem; /* Space above the box */
+    min-height: 350px; /* Minimum height to maintain size without content */
+    width: 75%; /* Full width */
+    overflow-y: auto; /* Allow scrolling when content overflows */
+    border: 1px solid #ddd; /* Border for definition */
+  }
+
+  .quiz-output-box {
+    background: #FFF; /* Or another color based on your theme */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 1rem; /* Padding inside the box */
+    margin: 1rem 0; /* Margin on top and bottom, 0 for left and right */
+    width: calc(100% - 1rem); /* Full width minus the padding */
+    height: auto; /* Height should adjust based on content */
+    min-height: 350px; /* Minimum height to maintain size without content */
+    overflow-y: auto; /* Allow scrolling when content overflows */
+    flex: content;
+  }
+
+  .input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adjust as needed for spacing */
+    margin-top: 2rem;
+    width: 100%;
+  }
+  
+  .input-section input[type="file"] {
+    display: none; /* Hide the default file input */
+  }
+  
+  .input-section label {
+    background: linear-gradient(135deg, rgba(106, 17, 203, 1) 0%, rgba(37, 117, 252, 1) 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    display: inline-block; /* Align with other elements */
+  }
+  
+  .input-section input[type="text"] {
+    flex-grow: 1; /* Allows the text input to grow and fill the space */
+    width: calc(100% - 22rem); /* Subtract total width of buttons and gap */
+    max-width: 400px; /* Maximum width for the input field */
+    margin: 0; /* Align with other elements */
+  }
+  
+  .input-section button {
+    background-color: #1a8cd8;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: 2px solid #2c3e50; /* Give it an outline */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .input-section button:hover {
+    background-color: #0d6efd; /* Hover color */
+    box-shadow: 0 0 10px #0d6efd; /* Shadow effect on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .input-section {
+      flex-direction: column;
+    }
+  
+    .input-section input[type="text"] {
+      width: 100%; /* Full width on smaller screens */
+      margin: 10px 0; /* Add back some margin for vertical spacing */
+    }
+  
+    .input-section label,
+    .input-section button {
+      width: 100%; /* Full width for buttons */
+    }
+  }
+  
+  
+  .suga {
+  background: linear-gradient(to right, #1a8cd8 0%, rgb(136, 19, 136) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline; /* Or block, depending on your layout */
+  }
+
+  .input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  
+  .file-input-container {
+    background: linear-gradient(135deg, rgba(106, 17, 203, 1) 0%, rgba(37, 117, 252, 1) 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .file-input-container:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #6c5ce7 0%, #1a8cd8 100%);
+  }
+  
+  
+  .file-input-container input {
+    display: none; /* Hide the default file input */
+  }
+  
+  .file-input-container span {
+    font-size: 0.875rem;
+  }
+  
+  .input-section input[type="text"] {
+    flex-grow: 2;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .input-section button {
+    background: linear-gradient(135deg, rgba(106, 17, 203, 1) 0%, rgba(37, 117, 252, 1) 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-section button:hover {
+    background-color: #1380c6;
+    box-shadow: 0 0 10px #1380c6;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .input-section {
+      flex-direction: column;
+    }
+  
+    .input-section input[type="text"],
+    .input-section button,
+    .file-input-container {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+
+  /* ...other styles... */
+
+.file-display-bubble {
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 12px;
+    padding: 0.25rem 0.75rem;
+    margin-left: 10px;
+    font-size: 0.875rem;
+    display: inline-block;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* ...media queries and other styles... */
+  
+  
