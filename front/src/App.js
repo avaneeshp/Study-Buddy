@@ -3,13 +3,16 @@ import Home from './components/Home.jsx'
 import Navbar from './components/Navbar.jsx'
 import About from './components/About.jsx';
 import Feature from './components/Feature.jsx';
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
+
+  const [isNavbarFixed, setIsNavbarFixed] = useState(true);
+
   return (
     <Router>
-      <Navbar /> {/* The Navbar is placed here so it's included on all pages */}
+      <Navbar fixed={isNavbarFixed}/> {/* The Navbar is placed here so it's included on all pages */}
       <Routes> {/* Replaces Switch */}
         <Route path="/" element={<><Home /><Why /></>} exact /> {/* Note the use of `element` */}
         <Route path="/about" element={<About />} />

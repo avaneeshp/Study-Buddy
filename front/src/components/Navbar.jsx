@@ -2,8 +2,11 @@ import { Button, Navbar } from "flowbite-react";
 import React, { useState, useEffect } from 'react';
 import navbarLogo from "../assets/logoDump/navbarLogo.png";
 import "../App.css"
+import { useLocation } from 'react-router-dom';
 
-function Component() {
+function Component({ fixed }) {
+  const location = useLocation();
+  const isFixed = !location.pathname === '/'; // Assuming you want it fixed only on the home page
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {

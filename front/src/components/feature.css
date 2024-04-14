@@ -1,0 +1,165 @@
+.figure-component {
+    padding: 4rem 1rem;
+  }
+  
+  .content-box {
+    background: linear-gradient(to bottom, #ffffff, #f8f8ff);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 4rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .api-output {
+    overflow-y: auto;
+    max-height: 300px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    width: 100%;
+  }
+  
+  .api-response {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0;
+  }
+  
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .input-section input[type="file"],
+  .input-section input[type="text"] {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-section button {
+    background-color: #1a8cd8;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-section button:hover {
+    background-color: #1380c6;
+  }
+  
+  .quiz-section {
+    margin-top: 2rem;
+  }
+  
+  .quiz-section h2 {
+    color: #1a8cd8;
+    margin-bottom: 1rem;
+  }
+  
+  .quiz-section input[type="number"] {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .quiz-section button {
+    /* Same as .input-section button */
+  }
+  
+  .questions-output {
+    margin-top: 1rem;
+  }
+  
+  .question {
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+  }
+  
+  .score {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1rem;
+  }
+  
+  .statistic {
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  .statistic-number {
+    /* Gradient text style */
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #1a8cd8 0%, #4dabf7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .statistic-label {
+    font-size: 1rem;
+  }
+  
+  .testimonial {
+    max-width: 45%;
+    margin: 1rem;
+    padding: 1rem;
+    border-left: 4px solid #1a8cd8;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .testimonial-quote {
+    quotes: "“" "”" "‘" "’";
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  
+  .testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .figure-component {
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom right, #000026 20%, rgb(136, 19, 136) 100%);
+    min-height: 100vh; /* Ensure it takes at least the full height of the viewport */
+  }
+
+  .api-output {
+    background: #FFF; /* Or another color based on your theme */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 1rem; /* Padding inside the box */
+    margin-top: 2rem; /* Space above the box */
+    height: auto; /* Height should adjust based on content */
+    min-height: 350px; /* Minimum height to maintain size without content */
+    width: 100%; /* Full width */
+    overflow-y: auto; /* Allow scrolling when content overflows */
+    border: 1px solid #ddd; /* Border for definition */
+  }
