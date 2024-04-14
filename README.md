@@ -1,4 +1,4 @@
-<h1>Study Buddy</h1>
+# Study Buddy
 This is a study-helper website project made for the hackathon Google x MHacks by Aditya Patel, Avaneesh Prasad, Eshwar Kanakasabai, and Nidhil Nayudu.
 
 ## Inspiration
@@ -22,8 +22,8 @@ All of us were not that familiar with front-end web development, so tackling Rea
 ## What's next for Study Buddy
 Coming soon, we have exciting features headlined by Q&A support. We will fine tune the model with sample questions and answers trained on information from the lecture slides. So then, StudyBuddy can fulfill their dream of becoming an actual TA by learning the course content, which also gives you more course relevant feedback! Additionally, we aim to refine the quiz format to better help prepare our students, even involving features like Short Answer questions or matching. 
 
-<h3>Services</h3>
+## Services
 A user can input files of the format pdf, jpeg, jpg, png, and txt, and our website will generate and output a summary of each of the files. Then, the user can proceed to request a quiz about all the files it has inputted. On request, the website will create an interactive quiz that can test the user's knowledge.
 
-<h3>Logo</h3>
-![mascot](https://github.com/avaneeshp/MHacks/assets/40675893/965e930a-d760-4e34-af17-77c0f2378e0f)
+## Logo
+![mascot](https://raw.githubusercontent.com/avaneeshp/Study-Buddy/main/front/src/assets/logoDump/mascot.jpg)
