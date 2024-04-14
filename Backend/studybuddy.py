@@ -23,14 +23,13 @@ app.config['UPLOAD_FOLDER'] = './'
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-results = []
 
 @app.route('/process_summary', methods=['POST'])
 def process_summary():
     cleaner()
     files = request.files.getlist('file')
     topic = request.form['topic']
-    results.clear()
+    combined_results = {}
     for file in files:
         if file and allowed_file(file.filename):
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
@@ -39,8 +38,13 @@ def process_summary():
             outputpath = './' + file.filename + '_summary.json'
             with open(outputpath, 'r') as out:
                 data = json.load(out)
-                results.append(data)
-    return jsonify(results)
+                combined_results.update(data)
+    # with open('final.json', 'w') as json_file:
+    #     json.dump(combined_results, json_file, indent=4)
+    # with open('./final.json', 'r') as file:
+    #     json_content = json.load(file)
+    new_json_content = {'summary': combined_results}
+    return jsonify(new_json_content)
 
 @app.route('/process_quiz', methods=['POST'])
 def process_quiz():

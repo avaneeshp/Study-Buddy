@@ -17,7 +17,7 @@ def converter(file, topic):
     genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
     model = genai.GenerativeModel('gemini-1.5-pro-latest')
     promptsum = """I am having trouble understanding """ + topic +  """. Here is the lecture information associated with it.
-    As a professor focusing on that field, can you summarize that for me, organizing it by the main topics? Return output in json format."""
+    As a professor focusing on that field, can you summarize that for me, organizing it by the key points? Return output in json format."""
     promptquiz = """I am having trouble understanding """ + topic +  """. Here are the lecture information associated with it. 
     Can you make a multiple choice quiz (A,B,C,D) with 10 questions, and give me the answers? Return output in json format."""
 
@@ -77,7 +77,7 @@ def converter(file, topic):
         img = PIL.Image.open(file.filename)
         inputsum=[promptsum, img]
         inputquiz=[promptquiz, text]
-        
+
         response = model.generate_content(inputsum)
         with open('./' + file.filename + '_summary.json', 'w') as f:
             f.write(response.text)
