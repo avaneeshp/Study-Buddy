@@ -82,3 +82,18 @@
   color: white; /* Change text color on hover if needed */
 }
 
+.sweet {
+  background: linear-gradient(to right,  #F0E2B6 0%, gold 50%, #F0E2B6 1000%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline; /* Or block, depending on your layout */
+}
+
+.disclaimer-text {
+  font-size: 0.75rem; /* Small font size for disclaimer text */
+  color: #6c757d; /* A neutral color that does not stand out */
+  text-align: center;
+  margin-top: 1rem; /* Space it a bit from the content above if necessary */
+  margin-bottom: 1rem; /* Space it a bit from the content below if necessary */
+  line-height: 1.2; /* Adjust line spacing for better readability */
+}

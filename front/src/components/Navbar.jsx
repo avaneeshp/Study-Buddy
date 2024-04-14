@@ -1,6 +1,6 @@
 import { Button, Navbar } from "flowbite-react";
 import React, { useState, useEffect } from 'react';
-import navbarLogo from "../assets/navbarLogo.png";
+import navbarLogo from "../assets/logoDump/navbarLogo.png";
 import "../App.css"
 
 function Component() {
