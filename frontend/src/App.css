@@ -1,0 +1,100 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Add this to your styles.css or equivalent */
+.nav-link::after {
+  color: white !important;
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px; /* Adjust height as needed */
+  background: white; /* This is the color of the sliding bar */
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: white !important;  /* Forces the color to remain white on hover */
+}
+
+.powerful-results {
+  background: linear-gradient(to right, #F0E2B6 0%, #F0E2B6 50%, #BFC1C2 100%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em;
+  font-weight: bold;
+  padding-left: 100px;
+}
+
+.home-background {
+  background: linear-gradient(to bottom, #000026 0%, #2c3e50 50%, #f8f8ff 100%);
+  min-height: 100vh;
+  color: white;
+  padding: 100px;
+}
+
+.try-it-free-btn {
+  background-color: white; /* Normal state background */
+  color: #000; /* Text color for normal state */
+  border: 2px solid white; /* Optional: Gold border to hint at the hover state */
+}
+
+.try-it-free-btn:hover {
+  background-image: linear-gradient(to right, #BFC1C2, #F0E2B6);
+  color: white; /* Change text color on hover if needed */
+}
+
+.sweet {
+  background: linear-gradient(to right,  #F0E2B6 0%, gold 50%, #F0E2B6 1000%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline; /* Or block, depending on your layout */
+}
+
+.disclaimer-text {
+  font-size: 0.75rem; /* Small font size for disclaimer text */
+  color: #6c757d; /* A neutral color that does not stand out */
+  text-align: center;
+  margin-top: 1rem; /* Space it a bit from the content above if necessary */
+  margin-bottom: 1rem; /* Space it a bit from the content below if necessary */
+  line-height: 1.2; /* Adjust line spacing for better readability */
+}
+

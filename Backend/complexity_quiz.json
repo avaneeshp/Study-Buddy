@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What is the primary focus of complexity analysis in algorithms?",
+    "options": {
+      "A": "Exact number of steps for a specific input size",
+      "B": "Trend of how the number of steps changes with input size",
+      "C": "Implementation details and programmer skills",
+      "D": "Impact of hardware and compiler optimizations"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "In Big-O notation, what does O(1) represent?",
+    "options": {
+      "A": "Linear time complexity",
+      "B": "Logarithmic time complexity",
+      "C": "Constant time complexity",
+      "D": "Exponential time complexity"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Which of the following is NOT a common order of functions used in complexity analysis?",
+    "options": {
+      "A": "O(n^2)",
+      "B": "O(log n)",
+      "C": "O(n^(1/2))",
+      "D": "O(n log n)"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "When analyzing the time complexity of an algorithm, what is typically considered as one step?",
+    "options": {
+      "A": "Executing the entire algorithm",
+      "B": "Performing a primitive operation (e.g., assignment, comparison)",
+      "C": "Reading the input data",
+      "D": "Writing the output data"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "What is the time complexity of a simple for loop that iterates 'n' times?",
+    "options": {
+      "A": "O(1)",
+      "B": "O(log n)",
+      "C": "O(n)",
+      "D": "O(n^2)"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "What is the time complexity of a nested for loop, where each loop iterates 'n' times?",
+    "options": {
+      "A": "O(n)",
+      "B": "O(n log n)",
+      "C": "O(n^2)",
+      "D": "O(2^n)"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Which algorithm typically exhibits logarithmic time complexity?",
+    "options": {
+      "A": "Bubble sort",
+      "B": "Binary search",
+      "C": "Linear search",
+      "D": "Insertion sort"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "What does amortized analysis deal with?",
+    "options": {
+      "A": "Average-case complexity of independent operations",
+      "B": "Worst-case complexity of a sequence of operations",
+      "C": "Best-case complexity of an algorithm",
+      "D": "Average complexity considering all possible inputs"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "Which data structure often benefits from amortized analysis due to its 'spiky' time profile?",
+    "options": {
+      "A": "Linked list",
+      "B": "Dynamic array/vector",
+      "C": "Binary search tree",
+      "D": "Queue"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "How would you describe the relationship between Big-O, Big-Theta, and Big-Omega notations?",
+    "options": {
+      "A": "Big-O is an upper bound, Big-Theta is a tight bound, and Big-Omega is a lower bound",
+      "B": "They are all equivalent and interchangeable",
+      "C": "Big-O is for best-case, Big-Theta for average-case, and Big-Omega for worst-case",
+      "D": "They are only applicable to specific data structures"
+    },
+    "answer": "A"
+  }
+]
