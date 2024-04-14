@@ -1,5 +1,5 @@
 <h1>Study Buddy</h1>
-This is a study-helper website project made for the hackathon Google x MHacks.
+This is a study-helper website project made for the hackathon Google x MHacks by Aditya Patel, Avaneesh Prasad, Eshwar Kanakasabai, and Nidhil Nayudu.
 
 ## Inspiration
 Lately, the EECS Office Hours queue has been busier than Ann Arbor on football gamedays. Myself and my peers alike are often in dire need of help, but can never rely on office hours to get them. For a service that is so highly encouraged, it would be nice to have availability and access. So, we sought to solve this issue by making a virtual TA, training to solve all of these issues! This feature aims to summarize any course content file provided into quick, easy flashcards to study from. 
