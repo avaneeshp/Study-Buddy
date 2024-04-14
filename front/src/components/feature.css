@@ -3,6 +3,9 @@
   }
   
   .content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: linear-gradient(to top left, rgb(250, 217, 250), #f8f8ff 70%);
     border-radius: 15px;
     padding: 2rem;
@@ -138,6 +141,7 @@
   }
 
   .output-box {
+    position: relative;
     background: #FFF; /* Or another color based on your theme */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
@@ -147,6 +151,8 @@
     width: 75%; /* Full width */
     overflow-y: auto; /* Allow scrolling when content overflows */
     border: 1px solid #ddd; /* Border for definition */
+    flex: auto;
+    max-width: 1200px;
   }
 
   .quiz-output-box {
@@ -250,6 +256,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    text-align: center;
   }
   
   .file-input-container:hover {
@@ -321,3 +328,97 @@
   /* ...media queries and other styles... */
   
   
+  .suga2 {
+    background: rgb(136, 19, 136);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline; /* Or block, depending on your layout */
+    }
+      
+      .quiz-section {
+        opacity: 0;
+        transform: translateY(20px); 
+        visibility: hidden;
+        transition: opacity 0.5s, transform 0.5s, visibility 0.5s;
+      }
+      
+      .quiz-section-visible {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        padding-top: 50px;
+      }
+
+      .quiz-input-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .num-questions-input {
+        width: 50%; /* Set to desired width */
+      }
+      
+      /* Add styles for your label if needed */
+      label {
+        color: #000; /* Adjust as needed */
+        font-size: 1rem; /* Adjust as needed */
+      }
+      
+      /* Make sure this class targets the button inside your .quiz-input-container */
+      .file-input-container {
+        /* your existing styles for the button */
+      }
+      
+      /* Make sure your transitions and visibility styles are set for the .quiz-section-visible class */
+      .quiz-section-visible {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+      }
+      
+      /* Hide the section initially */
+      .quiz-section {
+        opacity: 0;
+        transform: translateY(20px);
+        visibility: hidden;
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+      }
+      
+      
+      /* Modify the number input type style */
+      .input-section input[type="number"] {
+        width: 200px; /* Half the size of 'Topic Name' input */
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        text-align: center;
+        color: black;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+      }
+      
+      .score-container {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        border: 2px solid #1a8cd8; /* Border color to match your theme */
+        color: #1a8cd8; /* Text color to match your theme */
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        font-size: 1.2rem;
+        font-weight: bold;
+        z-index: 10; /* Ensure it sits above other content */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 80px; /* To ensure size for single digits */
+        flex-direction: column; /* Stack flex children vertically */
+        align-items: flex-start; /* Align children to the start of the cross axis */
+      }
+      
+      .score {
+        margin: 0; /* Remove margin if any */
+      }

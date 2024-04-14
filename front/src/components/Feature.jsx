@@ -44,6 +44,7 @@ function Figure() {
   const [quizQuestions, setQuizQuestions] = useState([]);
   const [numQuestions, setNumQuestions] = useState(0);
   const [currentScore, setCurrentScore] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(1);
 
   const handleFileSelect = (event) => {
     setFiles([...files, ...event.target.files]);
@@ -55,14 +56,17 @@ function Figure() {
 
   const handleSendToApi = async () => {
     // API call logic here
+    setQuizStarted(true);
   };
 
   const handleQuizStart = async () => {
     // API call to start quiz
+    setQuizPopulated(true);
   };
 
   const handleAnswerSelect = (questionIndex, answerIndex) => {
     // Logic to check answers and update score
+    setCurrentQuestion(currentQuestion + 1);
   };
 
   return (
@@ -78,55 +82,57 @@ function Figure() {
         </div>
 
         <div className="input-section">
-  <label className="file-input-container">
-    Choose Files
-    <input id="file-upload" type="file" multiple onChange={handleFileSelect} />
-  </label>
-  
-  <div className="file-display-bubble">
-    {files.length === 0 ? 'No files selected' :
-     files.length === 1 ? files[0].name :
-     `${files.length} files selected`}
-  </div>
-  
-  <input type="text" value={topicName} onChange={handleTopicNameChange} placeholder="Topic Name" />
-  <button onClick={handleSendToApi} className='file-input-container'>Generate</button>
-</div>
+            <label className="file-input-container">
+                Choose Files
+                <input id="file-upload" type="file" multiple onChange={handleFileSelect} />
+            </label>
+            
+            <div className="file-display-bubble">
+                {files.length === 0 ? 'No files selected' :
+                files.length === 1 ? files[0].name :
+                `${files.length} files selected`}
+            </div>
+            
+            <input type="text" value={topicName} onChange={handleTopicNameChange} placeholder="Topic Name" />
+            <button onClick={handleSendToApi} className='file-input-container'>Generate</button>
+        </div>
+          
 
 
-
-
-        
-        {/* QuizCreation */}
+        {/* Quiz Creation */}
         {quizStarted && (
-          <div className="quiz-section">
-          <h2 style={{ color: '#1a8cd8', fontSize: '1.3rem', fontWeight: 'bold' }}>Ready to practice? Lets create a quiz!</h2>
-            <input type="number" value={numQuestions} onChange={(e) => setNumQuestions(e.target.value)} placeholder="Number of questions" />
-            <button onClick={handleQuizStart}>Create Quiz</button>
-        </div> )}
+        <div className={`quiz-section-visible ${quizStarted ? 'quiz-section-visible' : ''}`}>
+            <h2 style={{ color: '#1a8cd8', fontSize: '1.3rem', fontWeight: 'bold', paddingBottom: '1px', paddingLeft: '75px'}}>
+            Ready to <span className='suga2'>practice</span>? Let's create a quiz!
+            </h2>
+            <div className="input-section">
+                <label htmlFor="numQuestions" className=''>How many questions?</label>
+                <input type="number" id="numQuestions" value={numQuestions} onChange={(e) => setNumQuestions(e.target.value)} placeholder="0" />
+                <button className="file-input-container" onClick={handleQuizStart}>Generate</button>
+            </div>
+        </div>)}
 
 
         {/* Actual Quiz Output */}
-        {quizPopulated && (<div className="output-box">
-          {quizQuestions.map((question, qIndex) => (
-            <div key={qIndex} className="question">
-              <p>{question.questionText}</p>
-              {question.choices.map((choice, cIndex) => (
-                <button key={cIndex} onClick={() => handleAnswerSelect(qIndex, cIndex)}>
-                  {choice}
-                </button>
-              ))}
+        {quizPopulated && (
+        <div className="output-box">
+            {/* Score Container */}
+            <div className="score-container">
+                <span className="Correct">Score: {currentScore}</span>
+                <span className="Correct">Question {currentQuestion}/{numQuestions}</span>
             </div>
-            ))}
-        </div>)}
-        
-
-        {/*  Quiz Score Output */}
-        {quizPopulated && (<div>
-            <p className="score">Score: {currentScore}</p>
+            
+            {/* Questions */}
+            {quizQuestions.map((question, qIndex) => (
+            <div key={qIndex} className="question">
+                <p>{question.questionText}</p>
+                {question.choices.map((choice, cIndex) => (
+                    <button key={cIndex} onClick={() => handleAnswerSelect(qIndex, cIndex)}>
+                        {choice}
+                    </button> ))}
+            </div> ))}
         </div> )}
-        
-
+    
       </div>
     </div>
   );
