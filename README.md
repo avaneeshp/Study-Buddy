@@ -1,4 +1,4 @@
-<h1>StudyBuddy</h1>
+<h1>Study Buddy</h1>
 This is a study-helper website project made for the hackathon Google x MHacks.
 
 <h3>Description</h3>
